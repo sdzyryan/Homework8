@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -46,14 +48,13 @@ public class Main {
 
         long [] massivThree = {7, 14, 21, 28};
         for (int i = 0; i < massivThree.length; i++) {
-            if (i < massivThree.length - 1) {
+            System.out.print(massivThree[i]);
+            if (i != massivThree.length - 1) {
                 System.out.print(massivThree[i] + ", ");
             }
-            if (i == massivThree.length - 1) {
-                System.out.println(massivThree[i]);
-            }
         }
-        }
+        System.out.println();
+    }
 
     public static void task3 () {
         System.out.println("Задача 3");
@@ -95,10 +96,15 @@ public class Main {
     public static void task4 () {
         System.out.println("Задача 3");
 
-        int[] array = new int[3];
-        array[0] = 2;
-        array[1] = 4;
-        array[2] = 6;
-
+        int[] massivOne = new int[3];
+        massivOne [0] = 1;
+        massivOne [1] = 2;
+        massivOne [2] = 3;
+        for (int i = 0; i < 3; i++) {
+            if (massivOne[i] % 2 != 0) {
+            massivOne[i] += 1;
+            }
+        }
+        System.out.println(Arrays.toString(massivOne));
     }
 }
